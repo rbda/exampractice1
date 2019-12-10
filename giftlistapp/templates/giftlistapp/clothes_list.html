@@ -1,2 +1,15 @@
-<h1>heading</h1>
-{{ object_list }}
+<head>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+<h1>All the Clothes</h1>
+number of Clothes items: {{ object_list.count }}
+
+{% for thing in object_list %}
+
+    <ul>{{ thing.pk }}
+        <li class="brand">brand: {{ thing.brand }}</li>
+        <li class="size">size: {{ thing.size }}</li>
+        <li>name: {{ thing.name }}</li>
+    </ul>
+    <hr>
+{% endfor %}
