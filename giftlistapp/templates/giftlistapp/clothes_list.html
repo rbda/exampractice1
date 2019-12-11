@@ -1,5 +1,6 @@
+{% load static %}
 <head>
-    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'mystyle.css' %}">
 </head>
 <h1>All the Clothes</h1>
 number of Clothes items: {{ object_list.count }}
